@@ -2,49 +2,49 @@
   "categories": [
     {
       "id": "123",
-      "title": "CSPM ",
+      "title": "CATEGORY 1",
       "widgets": [
         {
           "id": "1",
-          "name": "abc",
+          "name": "CATEGORY 1 Widget 1",
           "text": "loremipsunandijladw"
         },
         {
           "id": "2",
-          "name": "def",
+          "name": "CATEGORY 1 Widget 2",
           "text": "loremipsunandijladw"
         }
       ]
     },
     {
       "id": "456",
-      "title": "CWPP",
+      "title": "CATEGORY 2",
       "widgets": [
         {
           "id": "1",
-          "name": "Top 5 Namespace Specific Alerts",
+          "name": "CATEGORY 2 Widget 1",
           "text": "asdgfsffsadf"
         },
         {
           "id": "2",
-          "name": "Workload Alerts",
+          "name": "CATEGORY 2 Widget 2",
           "text": "asdfsdafsdf"
         }
       ]
     },
     {
       "id": "789",
-      "title": "Registry Scan ",
+      "title": "CATEGORY 3",
       "widgets": [
         {
-          "id": "namespaceAlerts",
-          "name": "Top 5 Namespace Specific Alerts",
-          "text": "asdfsafsadf"
+          "id": "1",
+          "name": "CATEGORY 3 Widget 1",
+          "text": "loremipsunandijladw"
         },
         {
-          "id": "workloadAlerts",
-          "name": "Workload Alerts",
-          "text": "asdfasdfsdf"
+          "id": "2",
+          "name": "CATEGORY 3 Widget 2",
+          "text": "loremipsunandijladw"
         }
       ]
     }
