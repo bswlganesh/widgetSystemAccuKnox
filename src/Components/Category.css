@@ -21,6 +21,29 @@
   color: #1a1a1a;
 }
 
+.category-controls {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.category-btn {
+  background: #f1f5f9;
+  border: 1px solid #e2e8f0;
+  padding: 4px 10px;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: #475569;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.category-btn:hover {
+  background: #e2e8f0;
+  border-color: #cbd5e1;
+}
+
 .add-widget-btn {
   background: #eef3ff;
   border: none;
@@ -35,6 +58,11 @@
 
 .add-widget-btn:hover {
   background: #dbe5ff;
+}
+
+.category-btn.danger {
+  background-color: #fef2f2;
+  color: #dc2626;
 }
 
 /* Widgets grid */

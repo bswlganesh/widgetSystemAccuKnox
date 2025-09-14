@@ -17,6 +17,31 @@ const dashboardReducer = (state, action) => {
         ),
       };
     }
+    case 'ADD_CATEGORY': {
+      const { newCategory } = action.payload;
+      return {
+        ...state,
+        categories: [...state.categories, newCategory],
+      };
+    }
+    case 'REMOVE_CATEGORY': {
+      const { categoryId } = action.payload;
+      return {
+        ...state,
+        categories: state.categories.filter(
+          (category) => category.id !== categoryId
+        ),
+      };
+    }
+    case 'UPDATE_CATEGORY_NAME': {
+      const { categoryId, newName } = action.payload;
+      return {
+        ...state,
+        categories: state.categories.map((category) =>
+          category.id === categoryId ? { ...category, title: newName } : category
+        ),
+      };
+    }
     case 'REMOVE_WIDGET': {
       const { categoryId, widgetId } = action.payload;
       return {
@@ -61,8 +86,24 @@ export const DashboardProvider = ({ children, initialData }) => {
     dispatch({ type: 'REMOVE_WIDGET', payload: { categoryId, widgetId } });
   };
 
+  const addCategory = (newCategory) => {
+    dispatch({ type: 'ADD_CATEGORY', payload: { newCategory } });
+  };
+
+  const removeCategory = (categoryId) => {
+    dispatch({ type: 'REMOVE_CATEGORY', payload: { categoryId } });
+  };
+
+  const updateCategoryName = (categoryId, newName) => {
+    dispatch({ type: 'UPDATE_CATEGORY_NAME', payload: { categoryId, newName } });
+  };
+
   return (
-    <DashboardContext.Provider value={{ ...state, addWidget, removeWidget }}>
+    <DashboardContext.Provider
+      value={{
+        ...state, addWidget, removeWidget, addCategory, removeCategory, updateCategoryName
+      }}
+    >
       {children}
     </DashboardContext.Provider>
   );
