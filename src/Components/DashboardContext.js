@@ -1,6 +1,8 @@
-import React, { createContext, useReducer, useContext } from 'react';
+import React, { createContext, useReducer, useContext, useEffect } from 'react';
 
 const DashboardContext = createContext();
+
+const LOCAL_STORAGE_KEY = 'dashboardState';
 
 const dashboardReducer = (state, action) => {
   switch (action.type) {
@@ -32,7 +34,24 @@ const dashboardReducer = (state, action) => {
 };
 
 export const DashboardProvider = ({ children, initialData }) => {
-  const [state, dispatch] = useReducer(dashboardReducer, initialData);
+  const [state, dispatch] = useReducer(dashboardReducer, initialData, (defaultInitialData) => {
+    try {
+      const storedState = localStorage.getItem(LOCAL_STORAGE_KEY);
+      return storedState ? JSON.parse(storedState) : defaultInitialData;
+    } catch (error) {
+      console.error("Error reading from localStorage", error);
+      return defaultInitialData;
+    }
+  });
+
+  // Save state to localStorage whenever it changes
+  useEffect(() => {
+    try {
+      localStorage.setItem(LOCAL_STORAGE_KEY, JSON.stringify(state));
+    } catch (error) {
+      console.error("Error writing to localStorage", error);
+    }
+  }, [state]);
 
   const addWidget = (categoryId, widget) => {
     dispatch({ type: 'ADD_WIDGET', payload: { categoryId, widget } });

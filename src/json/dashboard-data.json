@@ -1,50 +1,50 @@
 {
   "categories": [
     {
-      "id": "cspm",
-      "title": "CSPM Executive Dashboard",
+      "id": "123",
+      "title": "CSPM ",
       "widgets": [
         {
-          "id": "cloudAccounts",
-          "name": "Cloud Accounts",
-          "text": "Random text for Cloud Accounts widget"
+          "id": "1",
+          "name": "abc",
+          "text": "loremipsunandijladw"
         },
         {
-          "id": "cloudRisk",
-          "name": "Cloud Account Risk Assessment",
-          "text": "Random text for Cloud Account Risk Assessment widget"
+          "id": "2",
+          "name": "def",
+          "text": "loremipsunandijladw"
         }
       ]
     },
     {
-      "id": "cwpp",
-      "title": "CWPP Dashboard",
+      "id": "456",
+      "title": "CWPP",
       "widgets": [
         {
-          "id": "namespaceAlerts",
+          "id": "1",
           "name": "Top 5 Namespace Specific Alerts",
-          "text": "Random text for Namespace alerts"
+          "text": "asdgfsffsadf"
         },
         {
-          "id": "workloadAlerts",
+          "id": "2",
           "name": "Workload Alerts",
-          "text": "Random text for Workload alerts"
+          "text": "asdfsdafsdf"
         }
       ]
     },
     {
-      "id": "registtri scan",
-      "title": "Registry Scan Dashboard",
+      "id": "789",
+      "title": "Registry Scan ",
       "widgets": [
         {
           "id": "namespaceAlerts",
           "name": "Top 5 Namespace Specific Alerts",
-          "text": "Random text for Namespace alerts"
+          "text": "asdfsafsadf"
         },
         {
           "id": "workloadAlerts",
           "name": "Workload Alerts",
-          "text": "Random text for Workload alerts"
+          "text": "asdfasdfsdf"
         }
       ]
     }

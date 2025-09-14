@@ -8,7 +8,6 @@ const AddWidgetModal = ({ category, onClose, onAddWidget, onRemoveWidget }) => {
   const [selectedCategory, setSelectedCategory] = useState(category || null);
   const [activeTab, setActiveTab] = useState("Add/Remove");
   const [searchQuery, setSearchQuery] = useState("");
-  const [showAddForm, setShowAddForm] = useState(false);
   const [newWidgetName, setNewWidgetName] = useState("");
   const [newWidgetText, setNewWidgetText] = useState("");
 
@@ -43,7 +42,6 @@ const AddWidgetModal = ({ category, onClose, onAddWidget, onRemoveWidget }) => {
     onAddWidget(selectedCategory.id, newWidget);
     setNewWidgetName("");
     setNewWidgetText("");
-    setShowAddForm(false);
   };
 
   const filteredWidgets = useMemo(() => {
