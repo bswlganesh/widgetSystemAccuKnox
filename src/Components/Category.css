@@ -1,13 +1,13 @@
 .category {
-  
-  
+  background: #fff;
+  border-radius: 16px;
   padding: 18px 20px;
-
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
   display: flex;
   flex-direction: column;
 }
 
-
+/* Header */
 .category-header {
   display: flex;
   justify-content: space-between;
@@ -18,25 +18,63 @@
 .category-title {
   font-size: 1.2rem;
   font-weight: 600;
-  
+  color: #1a1a1a;
 }
 
 .add-widget-btn {
-
- 
+  background: #eef3ff;
+  border: none;
   padding: 6px 14px;
   border-radius: 8px;
   font-size: 0.9rem;
-
-
-
-
+  font-weight: 500;
+  color: #2a4eff;
+  cursor: pointer;
+  transition: 0.2s;
 }
 
+.add-widget-btn:hover {
+  background: #dbe5ff;
+}
 
-
+/* Widgets grid */
 .widgets-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   gap: 16px;
+}
+
+/* Widget card */
+.widget-card {
+  background: #fafbff;
+  border: 1px solid #e8ebf3;
+  border-radius: 14px;
+  padding: 16px;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.04);
+  display: flex;
+  flex-direction: column;
+  transition: 0.2s;
+}
+
+.widget-card:hover {
+  box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+}
+
+/* Add Widget Placeholder */
+.add-widget-card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #f7f9ff;
+  border: 2px dashed #cbd5e1;
+  color: #64748b;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.add-widget-card:hover {
+  background: #eef3ff;
+  border-color: #2a4eff;
+  color: #2a4eff;
 }

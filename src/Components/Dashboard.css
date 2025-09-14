@@ -1,8 +1,12 @@
+/* Container */
 .dashboard-container {
   padding: 20px;
+  background: #f7faff;
   min-height: 100vh;
   font-family: "Inter", sans-serif;
 }
+
+/* Header */
 .dashboard-header {
   display: flex;
   justify-content: space-between;
@@ -12,8 +16,8 @@
 
 .dashboard-title {
   font-size: 1.6rem;
-
-
+  font-weight: 600;
+  color: #1a1a1a;
 }
 
 .dashboard-controls {
@@ -22,21 +26,63 @@
 }
 
 .btn {
-
-
+  background: #eef3ff;
+  border: none;
   padding: 8px 14px;
   border-radius: 8px;
-
-
-
+  font-weight: 500;
+  color: #2a4eff;
+  cursor: pointer;
+  transition: 0.2s;
 }
 
+.btn:hover {
+  background: #dbe5ff;
+}
 
 .dropdown {
   padding: 8px 12px;
-  
-
-
-
+  border-radius: 8px;
+  border: 1px solid #e1e5ee;
+  background: #fff;
+  cursor: pointer;
+  font-weight: 500;
 }
 
+/* Grid Layout */
+.dashboard-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+  gap: 20px;
+}
+
+/* Each category (acts like a section) */
+.category {
+  background: #fff;
+  border-radius: 14px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+  padding: 18px;
+}
+
+/* Category Title */
+.category-title {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 12px;
+  color: #333;
+}
+
+/* Widgets inside category */
+.widget {
+  background: #fafbff;
+  border: 1px solid #e8ebf3;
+  border-radius: 12px;
+  padding: 14px;
+  margin-bottom: 14px;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.04);
+  transition: 0.2s;
+}
+
+.widget:hover {
+  box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+}
